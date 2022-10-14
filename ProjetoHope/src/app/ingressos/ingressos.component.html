@@ -1,0 +1,17 @@
+
+<div class="container" >
+  <mat-list fxFlex>
+
+
+    <mat-list-item *ngFor="let ingresso of ingressos" >
+      <img matListAvatar src={{ingresso.imagem}} alt={{ingresso.horario}} >
+      <h1 matLine>id: {{ingresso.id}} </h1>
+      <p matLine>
+         <span>Preço: {{ingresso.preco}}</span>
+      </p>
+    </mat-list-item>
+
+
+
+  </mat-list>
+</div>
