@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div fxFlex="40">
+    <img width="800px" mat-card-avatar src="../../assets/imagem-ticket.jpg">
+  </div>
+
+  <div fxFlex="40">
+    <div *ngIf="ingresso">
+      <mat-card>
+        <mat-card-title>
+          Id: {{ingresso.id}}
+        </mat-card-title>
+        <mat-card-content *ngFor="let comentarios of ingresso.comments">
+          <mat-card-subtitle>
+            nota: {{comentarios.rating}}
+            coments: {{comentarios.comment}}
+            Autor: {{comentarios.author}}
+            Data da postagem {{comentarios.date | date}}
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

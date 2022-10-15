@@ -6,5 +6,6 @@
    dia: string | undefined;
    preco: string | undefined;
    imagem: string | undefined;
+
  }
 

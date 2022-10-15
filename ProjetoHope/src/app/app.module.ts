@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { DetalhesIngressosComponent } from './detalhes-ingressos/detalhes-ingressos.component';
 import { IngressosComponent } from './ingressos/ingressos.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,6 +8,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // import { FlexLayoutModule } from '@angular/flex-layout';
@@ -14,9 +18,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import 'hammerjs';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-      IngressosComponent
+      IngressosComponent,
+      DetalhesIngressosComponent
    ],
    schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -27,6 +32,9 @@ import 'hammerjs';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
     // FlexLayoutModule
   ],
   providers: [],
