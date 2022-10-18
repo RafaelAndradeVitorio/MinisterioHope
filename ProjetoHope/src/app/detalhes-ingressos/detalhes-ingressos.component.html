@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" *ngIf="ingresso">
 
   <div fxFlex="40">
-    <img width="800px" mat-card-avatar src="../../assets/imagem-ticket.jpg">
+    <img width="800px" mat-card-avatar src={{ingresso.imagem}}>
   </div>
 
   <div fxFlex="40">
@@ -10,7 +10,7 @@
         <mat-card-title>
           Id: {{ingresso.id}}
         </mat-card-title>
-        <mat-card-content *ngFor="let comentarios of ingresso.comments">
+        <mat-card-content *ngFor="let comentarios of ingresso.comentario">
           <mat-card-subtitle>
             nota: {{comentarios.rating}}
             coments: {{comentarios.comment}}

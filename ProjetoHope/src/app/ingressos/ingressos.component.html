@@ -3,9 +3,10 @@
   <mat-list fxFlex>
 
 
-    <mat-list-item *ngFor="let ingresso of ingressos" >
-      <img matListAvatar src={{ingresso.imagem}} alt={{ingresso.horario}} >
+    <mat-list-item *ngFor="let ingresso of ingressos" (click) ='selecionar(ingresso)'>
+      <img matListAvatar src={{ingresso.imagem}} >
       <h1 matLine>id: {{ingresso.id}} </h1>
+      <h3>{{ingresso.horario}}</h3>
       <p matLine>
          <span>Preço: {{ingresso.preco}}</span>
       </p>
@@ -17,7 +18,7 @@
 
 </div>
 
-<app-detalhes-ingressos></app-detalhes-ingressos>
+<app-detalhes-ingressos [ingresso] = 'ingressoSelecionado'></app-detalhes-ingressos>
 <!-- <div fxFlex *ngIf="selectedIngressos">
   Igressos Selecionados
   <mat-card>
