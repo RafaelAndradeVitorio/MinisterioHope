@@ -1,7 +1,8 @@
+import { IngressosService } from './../Servicos/ingressos.service';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { Ingresso } from './ingresso.service';
+import { Ingresso } from './ingresso';
 import { MatListItem } from '@angular/material/list';
-import { INGRESSOS } from './ingressos.service'
+
 
 
 schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
@@ -14,20 +15,21 @@ schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class IngressosComponent implements OnInit {
 
-  ingressos: Ingresso[] = INGRESSOS;
+  ingressos: Ingresso[] | undefined;
   ingressoSelecionado: Ingresso | undefined;
 
+  constructor(private ingressosService: IngressosService) { }
+
+  ngOnInit() {
+    this.ingressos = this.ingressosService.getIngressos()
+  }
 
 
   selecionar (ingresso: Ingresso){
     this.ingressoSelecionado = ingresso
-    console.log('cliquei')
+    console.log()
   }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 
 }

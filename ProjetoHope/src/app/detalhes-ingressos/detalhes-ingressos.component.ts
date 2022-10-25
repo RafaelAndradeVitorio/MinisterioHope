@@ -1,6 +1,6 @@
-import { Ingresso } from './../ingressos/ingresso.service';
+import { Ingresso } from './../ingressos/ingresso';
 import { Component, Input, OnInit } from '@angular/core';
-import { INGRESSOS } from '../ingressos/ingressos.service';
+import { INGRESSOS } from '../ingressos/INGRESSOS';
 
 
 

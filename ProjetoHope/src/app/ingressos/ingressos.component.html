@@ -1,40 +1,21 @@
 
 <div class="container" >
+
   <mat-list fxFlex>
 
 
     <mat-list-item *ngFor="let ingresso of ingressos" (click) ='selecionar(ingresso)'>
       <img matListAvatar src={{ingresso.imagem}} >
-      <h1 matLine>id: {{ingresso.id}} </h1>
-      <h3>{{ingresso.horario}}</h3>
+      <div matLine>{{ingresso.lote}} </div>
+      <div mat-line>{{ingresso.dia}} ás {{ingresso.horario}}</div>
       <p matLine>
-         <span>Preço: {{ingresso.preco}}</span>
+         <span>Preço: {{ingresso.preco | currency}}</span>
       </p>
     </mat-list-item>
-
-
 
   </mat-list>
 
 </div>
 
 <app-detalhes-ingressos [ingresso] = 'ingressoSelecionado'></app-detalhes-ingressos>
-<!-- <div fxFlex *ngIf="selectedIngressos">
-  Igressos Selecionados
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>
-        <h3>{{selectedIngressos.id | uppercase}}</h3>
-      </mat-card-title>
-    </mat-card-header>
-    <img width="35px" mat-card-image src={{selectedIngressos.imagem}} alt={{selectedIngressos.id}}>
-    <mat-card-content>
-      <p>{{selectedIngressos.dia}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-</div> -->
+

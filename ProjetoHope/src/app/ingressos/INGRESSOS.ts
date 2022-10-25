@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { Ingresso } from './ingresso.service';
+import { Ingresso } from './ingresso'
 
 export const INGRESSOS: Ingresso[] = [
   {
     id: "1",
+    lote:"Primeiro lote",
     horario: "12h",
     dia: "12/02",
     preco: "5",
@@ -43,6 +43,7 @@ export const INGRESSOS: Ingresso[] = [
   },
   {
     id: "2",
+    lote:"Segundo lote",
     horario: "12h:10",
     dia: "10/02",
     preco: "5",
@@ -82,6 +83,7 @@ export const INGRESSOS: Ingresso[] = [
   },
   {
     id: "3",
+    lote:"Terceiro lote",
     horario: "12:20",
     dia: "11/02",
     preco: "5",
@@ -121,6 +123,7 @@ export const INGRESSOS: Ingresso[] = [
   },
   {
     id: "4",
+    lote:"Quarto lote",
     horario: "12:30",
     dia: "10/02",
     preco: "5",
@@ -159,11 +162,3 @@ export const INGRESSOS: Ingresso[] = [
     ]
   }
 ]
-
-@Injectable({
-  providedIn: 'root'
-})
-export class IngressosService {
-
-  constructor() { }
-}

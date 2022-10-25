@@ -16,9 +16,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
+import { IngressosService } from './Servicos/ingressos.service';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       IngressosComponent,
       DetalhesIngressosComponent
@@ -37,7 +38,9 @@ import 'hammerjs';
     MatCardModule,
     // FlexLayoutModule
   ],
-  providers: [],
+  providers: [
+    IngressosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
