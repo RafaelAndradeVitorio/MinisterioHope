@@ -13,16 +13,22 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
 import { IngressosService } from './Servicos/ingressos.service';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
       IngressosComponent,
-      DetalhesIngressosComponent
+      DetalhesIngressosComponent,
+      FooterComponent,
+      HeaderComponent,
+      HomeComponent
    ],
    schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -36,7 +42,7 @@ import { IngressosService } from './Servicos/ingressos.service';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    // FlexLayoutModule
+    FlexLayoutModule
   ],
   providers: [
     IngressosService
