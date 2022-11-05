@@ -6,6 +6,7 @@ export const INGRESSOS: Ingresso[] = [
     lote:"Primeiro lote",
     horario: "12h",
     dia: "12/02",
+    destaque: true,
     preco: "5",
     imagem: "../../assets/imagem-ticket.jpg",
     comentario: [
@@ -46,6 +47,7 @@ export const INGRESSOS: Ingresso[] = [
     lote:"Segundo lote",
     horario: "12h:10",
     dia: "10/02",
+    destaque: true,
     preco: "5",
     imagem: "../../assets/imagem-ticket.jpg",
     comentario: [
@@ -87,6 +89,7 @@ export const INGRESSOS: Ingresso[] = [
     horario: "12:20",
     dia: "11/02",
     preco: "5",
+    destaque: false,
     imagem: "../../assets/imagem-ticket.jpg",
     comentario: [
       {
@@ -126,6 +129,7 @@ export const INGRESSOS: Ingresso[] = [
     lote:"Quarto lote",
     horario: "12:30",
     dia: "10/02",
+    destaque: false,
     preco: "5",
     imagem: "../../assets/imagem-ticket.jpg",
     comentario: [

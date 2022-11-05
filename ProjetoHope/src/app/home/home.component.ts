@@ -1,4 +1,9 @@
+import { Ingresso } from './../ingressos/ingresso';
+import { PromotionService } from './../Servicos/promotion.service';
+
 import { Component, OnInit } from '@angular/core';
+import { IngressosService } from '../Servicos/ingressos.service';
+import { Promotion } from '../shered/promotion';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  ingresso: Ingresso | undefined;
+  promotion: Promotion | undefined;
+
+  constructor(private ingressosService : IngressosService, private promotionService : PromotionService) { }
 
   ngOnInit(): void {
+    this.ingresso = this.ingressosService.getIgressosDestaque()
+    this.promotion = this.promotionService.getPromotionDestaque()
   }
+
+
 
 }

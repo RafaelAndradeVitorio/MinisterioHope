@@ -20,6 +20,7 @@ import { IngressosService } from './Servicos/ingressos.service';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeComponent } from './home/home.component';
       DetalhesIngressosComponent,
       FooterComponent,
       HeaderComponent,
-      HomeComponent
+      HomeComponent,
+      ContatoComponent
    ],
    schemas: [
     CUSTOM_ELEMENTS_SCHEMA

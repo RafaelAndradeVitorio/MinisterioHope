@@ -4,7 +4,7 @@
   <mat-list fxFlex>
 
 
-    <mat-list-item *ngFor="let ingresso of ingressos" (click) ='selecionar(ingresso)'>
+    <mat-list-item *ngFor="let ingresso of ingressos" [routerLink] ="['/detalhes',ingresso.id]">
       <img matListAvatar src={{ingresso.imagem}} >
       <div matLine>{{ingresso.lote}} </div>
       <div mat-line>{{ingresso.dia}} ás {{ingresso.horario}}</div>
@@ -16,6 +16,4 @@
   </mat-list>
 
 </div>
-
-<app-detalhes-ingressos [ingresso] = 'ingressoSelecionado'></app-detalhes-ingressos>
 
