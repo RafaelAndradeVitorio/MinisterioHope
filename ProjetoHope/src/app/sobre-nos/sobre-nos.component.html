@@ -1,0 +1,11 @@
+<h1> Somos um grupo de artes da igreja batista Central de bangu</h1>
+
+
+ <mat-list>
+  <div mat-subheader>Nossos Líderes</div>
+  <mat-list-item *ngFor="let item of lista">
+    <mat-icon mat-list-icon> <fa-icon [icon]="faUser"></fa-icon> </mat-icon>
+    <div mat-line>{{item.nome}}</div>
+    <div mat-line> {{item.funcao}} </div>
+  </mat-list-item>
+  <mat-divider></mat-divider>

@@ -11,6 +11,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,6 +23,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +35,8 @@ import { ContatoComponent } from './contato/contato.component';
       FooterComponent,
       HeaderComponent,
       HomeComponent,
-      ContatoComponent
+      ContatoComponent,
+      SobreNosComponent
    ],
    schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -44,7 +50,9 @@ import { ContatoComponent } from './contato/contato.component';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatFormFieldModule,
+    FontAwesomeModule,
   ],
   providers: [
     IngressosService

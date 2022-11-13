@@ -1,3 +1,5 @@
+import { Lider } from './../shered/lider';
+import { LideresService } from './../Servicos/lideres.service';
 import { Ingresso } from './../ingressos/ingresso';
 import { PromotionService } from './../Servicos/promotion.service';
 
@@ -14,12 +16,14 @@ export class HomeComponent implements OnInit {
 
   ingresso: Ingresso | undefined;
   promotion: Promotion | undefined;
+  lideres: Lider | undefined;
 
-  constructor(private ingressosService : IngressosService, private promotionService : PromotionService) { }
+  constructor(private ingressosService : IngressosService, private promotionService : PromotionService, private lideresService: LideresService) { }
 
   ngOnInit(): void {
     this.ingresso = this.ingressosService.getIgressosDestaque()
     this.promotion = this.promotionService.getPromotionDestaque()
+    this.lideres = this.lideresService.getLideresDesc()
   }
 
 

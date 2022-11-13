@@ -1,3 +1,4 @@
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DetalhesIngressosComponent } from './detalhes-ingressos/detalhes-ingressos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { IngressosComponent } from './ingressos/ingressos.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'ingressos',     component: IngressosComponent },
   { path: 'contato',     component: ContatoComponent },
   { path: 'detalhes/:id', component: DetalhesIngressosComponent },
+  { path: 'sobre-nos', component: SobreNosComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
