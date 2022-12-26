@@ -1,3 +1,4 @@
+import { LideresService } from './Servicos/lideres.service';
 import { NgModule } from '@angular/core';
 import { DetalhesIngressosComponent } from './detalhes-ingressos/detalhes-ingressos.component';
 import { IngressosComponent } from './ingressos/ingressos.component';
@@ -12,10 +13,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { library, icon } from '@fortawesome/fontawesome-svg-core'
+import {MatInputModule } from '@angular/material/input';
+import {MatCheckboxModule } from '@angular/material/checkbox';
+import { library, icon } from '@fortawesome/fontawesome-svg-core';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 import 'hammerjs';
 import { IngressosService } from './Servicos/ingressos.service';
@@ -25,6 +30,7 @@ import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -36,7 +42,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       HeaderComponent,
       HomeComponent,
       ContatoComponent,
-      SobreNosComponent
+      SobreNosComponent,
+      LoginComponent
    ],
    schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -53,9 +60,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FlexLayoutModule,
     MatFormFieldModule,
     FontAwesomeModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [
-    IngressosService
+    IngressosService,
+    LideresService
+  ],
+  entryComponents: [
+   LoginComponent,
+   FooterComponent
   ],
   bootstrap: [AppComponent]
 })

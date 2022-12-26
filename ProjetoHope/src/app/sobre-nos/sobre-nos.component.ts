@@ -13,10 +13,12 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 export class SobreNosComponent implements OnInit {
 
   constructor(private lideres: LideresService) { }
-  lista: Lider[] = Lideres
+  lista: Lider[] | undefined;
   faUser = faUser;
 
   ngOnInit(): void {
+    this.lista = this.lideres.getLideres()
+
   }
 
 }

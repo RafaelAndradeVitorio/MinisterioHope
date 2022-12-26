@@ -13,6 +13,10 @@ export class LideresService {
     return Lideres
   }
 
+  getLideresById(id: string){
+    return Lideres.filter((lider) => lider.id === id)
+  }
+
   getLideresByName(nome: string){
     return Lideres.filter((lider) => lider.nome === nome)
   }
